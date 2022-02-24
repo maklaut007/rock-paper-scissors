@@ -12,7 +12,6 @@ function Sign({signType}) {
     }
 
   }
-  console.log(signType);
   return (
     <Styled.Sign>
       {renderSign()}
