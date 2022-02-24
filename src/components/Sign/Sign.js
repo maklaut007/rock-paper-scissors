@@ -1,4 +1,4 @@
-import * as Styled from './HeaderStyle.js';
+import * as Styled from './SignStyle.js';
 
 function Sign({signType}) {
   const renderSign = () => {
@@ -12,9 +12,10 @@ function Sign({signType}) {
     }
 
   }
+  console.log(signType);
   return (
     <Styled.Sign>
-      {renderSign}
+      {renderSign()}
     </Styled.Sign>
   );
 }
