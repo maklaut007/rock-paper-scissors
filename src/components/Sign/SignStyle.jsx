@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import RockImage from './../../images/icon-rock.svg';
-import PaperImage from './../../images/icon-paper.svg';
-import ScissorsImage from './../../images/icon-scissors.svg';
+import RockImage from '../../images/icon-rock.svg';
+import PaperImage from '../../images/icon-paper.svg';
+import ScissorsImage from '../../images/icon-scissors.svg';
 
 export const Sign = styled.div`
   width: 110px;
