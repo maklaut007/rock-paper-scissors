@@ -1,11 +1,12 @@
-// import { useContext } from 'react';
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import * as Styled from './SignStyle';
+import AppContext from '../../AppContext';
 
 function Sign({ signType }) {
-  // const theme = useContext(GameContext);
+  const game = useContext(AppContext);
   const handleSignPick = (chice) => {
+    console.log(game);
     console.log(chice);
   };
   const renderSign = () => {

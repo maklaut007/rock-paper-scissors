@@ -1,22 +1,18 @@
-import React, { createContext /* useContext */ } from 'react';
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import * as Styled from './AppStyle';
 import Header from './components/Header/Header';
 import PlayField from './components/PlayField/PlayField';
-// import Sign from './components/Sign/Sign';
+import AppContext, { contextValue } from './AppContext';
 
-const GameContext = createContext('Unknown');
-const game = {
-  currentSign: '',
-  score: 0,
-};
 function App() {
   return (
-    <GameContext.Provider value={game}>
+    <AppContext.Provider value={contextValue}>
       <Styled.App>
         <Header />
         <PlayField />
       </Styled.App>
-    </GameContext.Provider>
+    </AppContext.Provider>
   );
 }
 
