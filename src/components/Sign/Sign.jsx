@@ -1,14 +1,19 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementScore } from '../../store/gameSlice';
 import * as Styled from './SignStyle';
-import AppContext from '../../AppContext';
 
 function Sign({ signType }) {
-  const game = useContext(AppContext);
+  const gameStatus = useSelector((state) => state.game);
+  const dispatch = useDispatch();
+
   const handleSignPick = (chice) => {
-    console.log(game);
     console.log(chice);
+    console.log(gameStatus);
+    dispatch(incrementScore());
   };
+
   const renderSign = () => {
     switch (signType) {
       case 'rock':

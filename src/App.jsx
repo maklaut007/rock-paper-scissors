@@ -1,18 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Provider } from 'react-redux';
 import * as Styled from './AppStyle';
 import Header from './components/Header/Header';
 import PlayField from './components/PlayField/PlayField';
-import AppContext, { contextValue } from './AppContext';
+import store from './store/store';
 
 function App() {
   return (
-    <AppContext.Provider value={contextValue}>
+    <Provider store={store}>
       <Styled.App>
         <Header />
         <PlayField />
       </Styled.App>
-    </AppContext.Provider>
+    </Provider>
   );
 }
 
