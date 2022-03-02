@@ -5,6 +5,7 @@ import * as Styled from './AppStyle';
 import Header from './components/Header/Header';
 import PlayField from './components/PlayField/PlayField';
 import store from './store/store';
+import Results from './components/Results/Results';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Styled.App>
         <Header />
         <PlayField />
+        <Results />
       </Styled.App>
     </Provider>
   );

@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const gameSlice = createSlice({
   name: 'game',
   initialState: {
-    chosenSign: '',
+    chosenSign: 'a',
     score: 0,
   },
   reducers: {
@@ -14,10 +14,13 @@ export const gameSlice = createSlice({
     decrementScore: (state) => {
       state.score -= 1;
     },
+    changeSign: (state, action) => {
+      state.chosenSign = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { incrementScore, decrementScore } = gameSlice.actions;
+export const { incrementScore, decrementScore, changeSign } = gameSlice.actions;
 
 export default gameSlice.reducer;

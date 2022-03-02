@@ -4,10 +4,8 @@ import PaperImage from '../../images/icon-paper.svg';
 import ScissorsImage from '../../images/icon-scissors.svg';
 
 export const Sign = styled.div`
-  width: 110px;
-  height: 110px;
-  margin: 20px 30px;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Rock = styled.div`
