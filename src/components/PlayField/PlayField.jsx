@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Styled from './PlayFieldStyle';
@@ -9,7 +10,6 @@ function PlayField() {
   const dispatch = useDispatch();
 
   const handleSignPick = (chice) => {
-    console.log(gameStatus, 5);
     dispatch(changeSign(chice));
   };
 

@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import * as Styled from './HeaderStyle';
 
 function Score() {
+  const gameScore = useSelector((state) => state.game.score);
   return (
     <Styled.Score>
       <Styled.Title>
@@ -14,7 +16,7 @@ function Score() {
       </Styled.Title>
       <Styled.ScoreIcon>
         Score
-        <Styled.Number>12</Styled.Number>
+        <Styled.Number>{gameScore}</Styled.Number>
       </Styled.ScoreIcon>
     </Styled.Score>
   );
