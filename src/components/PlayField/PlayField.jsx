@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as Styled from './PlayFieldStyle';
 import Sign from '../Sign/Sign';
-import { changeSign } from '../../store/gameSlice';
+import { changeSign, changeGameStage } from '../../store/gameSlice';
 
 function PlayField() {
   const gameStatus = useSelector((state) => state.game);
@@ -11,6 +11,7 @@ function PlayField() {
 
   const handleSignPick = (chice) => {
     dispatch(changeSign(chice));
+    dispatch(changeGameStage());
   };
 
   return (

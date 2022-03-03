@@ -6,6 +6,7 @@ export const gameSlice = createSlice({
   initialState: {
     chosenSign: '',
     score: 0,
+    gameStage: 'initial',
   },
   reducers: {
     incrementScore: (state) => {
@@ -17,10 +18,18 @@ export const gameSlice = createSlice({
     changeSign: (state, action) => {
       state.chosenSign = action.payload;
     },
+    changeGameStage: (state) => {
+      if (state.gameStage === 'initial') {
+        state.gameStage = 'results';
+      } else {
+        state.gameStage = 'initial';
+      }
+    },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { incrementScore, decrementScore, changeSign } = gameSlice.actions;
+export const {
+  incrementScore, decrementScore, changeSign, changeGameStage,
+} = gameSlice.actions;
 
 export default gameSlice.reducer;
