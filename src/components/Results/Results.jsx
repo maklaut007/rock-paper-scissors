@@ -10,7 +10,7 @@ function Results() {
   const [opponentSign, setOpponentSign] = useState('');
   const gameStatus = useSelector((state) => state.game);
   const dispatch = useDispatch();
-
+  const [isVictorious, setIsVictorious] = useState(false);
   useEffect(() => {
     const randValue = Math.floor(Math.random() * 3);
     let sign = '';
@@ -30,6 +30,7 @@ function Results() {
   useEffect(() => {
     if ((gameStatus.chosenSign === 'rock' && opponentSign === 'scissors') || (gameStatus.chosenSign === 'scissors' && opponentSign === 'paper') || (gameStatus.chosenSign === 'paper' && opponentSign === 'rock')) {
       dispatch(incrementScore());
+      setIsVictorious(true);
     } else if ((gameStatus.chosenSign === 'scissors' && opponentSign === 'rock') || (gameStatus.chosenSign === 'rock' && opponentSign === 'paper') || (gameStatus.chosenSign === 'paper' && opponentSign === 'scissors')) {
       dispatch(decrementScore());
     }
@@ -42,16 +43,23 @@ function Results() {
 
   return (
     <Styled.Results>
-      <Styled.SignButton><Sign signType={gameStatus.chosenSign} /></Styled.SignButton>
+      <Styled.Choice>
+        <Styled.SignButton><Sign signType={gameStatus.chosenSign} /></Styled.SignButton>
+        <Styled.ChoiceText>YOU PICKED</Styled.ChoiceText>
+      </Styled.Choice>
+      <Styled.Choice>
+        <Styled.SignButton><Sign signType={opponentSign} /></Styled.SignButton>
+        <Styled.ChoiceText>THE HOUSE PICKED</Styled.ChoiceText>
+      </Styled.Choice>
       <Styled.ResultText>
-        You...
+        You
+        {isVictorious ? ' Win' : ' Lose'}
         <Styled.PlayAgainBtn
           onClick={() => { handlePlayAgain(); }}
         >
           Play Again
         </Styled.PlayAgainBtn>
       </Styled.ResultText>
-      <Styled.SignButton><Sign signType={opponentSign} /></Styled.SignButton>
     </Styled.Results>
   );
 }

@@ -15,6 +15,6 @@ export const PlayField = styled.div`
 export const SignButton = styled.div`
   width: 110px;
   height: 110px;
-  margin: 20px 30px;
+  margin: 0px 30px 20px;
   cursor: pointer;
 `;

@@ -10,7 +10,7 @@ export const Score = styled.header`
   padding: 8px 16px 8px 20px;
   border-radius: 5px;
   color: white;
-  margin-top: 30px;
+  margin: 30px 0 80px;
 `;
 export const Title = styled.div`
   line-height: 0.9em;
