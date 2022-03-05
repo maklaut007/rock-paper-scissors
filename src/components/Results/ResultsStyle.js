@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const scaleOut = keyframes`
+  from {
+    transform: scale(1, 1);
+    opacity: .3;
+  }
+  to {
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+`;
 
 export const Results = styled.div`
   display: flex;
@@ -32,6 +43,7 @@ export const SignButton = styled.div`
   border-radius: 100%;
   opacity: ${(props) => (props.resultsShown ? '100%' : '0')};
   transition: opacity 0.5s 1s ease-out;
+  position: relative;
 `;
 export const ResultText = styled.div`
   opacity: ${(props) => (props.resultsShown ? '100%' : '0')};
@@ -43,7 +55,7 @@ export const ResultText = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  transition: opacity 0.5s 1.5s ease-out;
+  transition: opacity 0.5s 2s ease-out;
 `;
 
 export const ResultTextHeader = styled.h2`
@@ -58,4 +70,18 @@ export const PlayAgainBtn = styled.button`
   padding: 20px 70px;
   font-size: 0.3em;
   border-radius: 10px;
+`;
+
+export const PulsingCircle = styled.div`
+  display: ${(props) => (props.victory ? 'block' : 'none')};
+  animation: ${scaleOut} 1s infinite ease-out 1.5s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: #fff;
+  opacity: 0;
+  z-index: 0;
 `;

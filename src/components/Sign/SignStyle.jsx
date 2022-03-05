@@ -6,6 +6,8 @@ import ScissorsImage from '../../images/icon-scissors.svg';
 export const Sign = styled.div`
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 1;
 `;
 
 export const Rock = styled.div`

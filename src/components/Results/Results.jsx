@@ -52,12 +52,14 @@ function Results() {
       <Styled.Choice>
         <Styled.SignButton resultsShown>
           <Sign signType={gameStatus.chosenSign} />
+          <Styled.PulsingCircle victory={victoryStatus === 'you win'} />
         </Styled.SignButton>
         <Styled.ChoiceText>YOU PICKED</Styled.ChoiceText>
       </Styled.Choice>
       <Styled.Choice>
         <Styled.SignButton resultsShown={resultsShown}>
           <Sign signType={opponentSign} />
+          <Styled.PulsingCircle victory={victoryStatus === 'you lose'} />
         </Styled.SignButton>
         <Styled.ChoiceText>THE HOUSE PICKED</Styled.ChoiceText>
       </Styled.Choice>
