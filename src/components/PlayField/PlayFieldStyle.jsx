@@ -3,7 +3,6 @@ import backgroundTriangle from '../../images/bg-triangle.svg';
 
 export const PlayField = styled.div`
   display: flex;
-  max-width: 500px;
   flex-flow: row wrap;
   justify-content: center;
   background-image: url(${backgroundTriangle});
@@ -13,8 +12,10 @@ export const PlayField = styled.div`
 `;
 
 export const SignButton = styled.div`
-  width: 110px;
-  height: 110px;
+  width: 30vw;
+  height: 30vw;
+  max-width: 290px;
+  max-height: 290px;
   margin: 0px 30px 20px;
   cursor: pointer;
 `;

@@ -32,6 +32,7 @@ export const ScoreIcon = styled.div`
   padding: 8px 20px;
 `;
 export const Number = styled.div`
-  font-size: 3.4em;
+  font-size: 3.6em;
   letter-spacing: 0px;
+  color: #56546A;
 `;

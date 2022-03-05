@@ -6,6 +6,7 @@ import * as Styled from './AppStyle';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import store from './store/store';
+import Rules from './components/Rules/Rules';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
@@ -31,7 +32,7 @@ function App() {
         <Header />
         <Main />
         <GlobalStyle />
-        Rules
+        <Rules />
       </Styled.App>
     </Provider>
   );

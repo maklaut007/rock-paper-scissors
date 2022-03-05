@@ -17,6 +17,7 @@ export const Rock = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100%;
+  background-size: 40%;
 `;
 
 export const Paper = styled.div`
@@ -28,6 +29,7 @@ export const Paper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100%;
+  background-size: 40%;
 `;
 
 export const Scissors = styled.div`
@@ -39,4 +41,5 @@ export const Scissors = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 100%;
+  background-size: 40%;
 `;
