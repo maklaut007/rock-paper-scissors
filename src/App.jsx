@@ -11,6 +11,8 @@ import Rules from './components/Rules/Rules';
 const GlobalStyle = createGlobalStyle`
   html, body {
     height: 100%;
+    margin:0;
+    padding:0;
   }
   * {
     border: 0;
