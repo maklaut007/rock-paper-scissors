@@ -11,9 +11,9 @@ function Main() {
   const renderGame = () => (gameStage === 'initial' ? <PlayField /> : <Results />);
 
   return (
-    <Styled.Main>
+    <main>
       {renderGame()}
-    </Styled.Main>
+    </main>
   );
 }
 

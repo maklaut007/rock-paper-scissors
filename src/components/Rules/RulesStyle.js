@@ -10,9 +10,18 @@ export const RulesButton = styled.button`
   text-transform: uppercase;
   font-size: 0.9em;
   letter-spacing: 0.1em;
+  
+  @media (min-width: 768px){
+    font-size: 0.7em;
+    padding: 16px 50px;
+    border-radius: 10px;
+  }
 `;
 export const Rules = styled.div`
   margin: auto 0 40px;
+  @media (min-width: 768px){
+    margin: auto 40px 40px auto;
+  }
 `;
 export const RulesInfo = styled.div`
   display: ${(props) => (props.displayRules ? 'flex' : 'none')};

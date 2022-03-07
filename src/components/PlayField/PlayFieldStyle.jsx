@@ -9,13 +9,14 @@ export const PlayField = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+  max-width: 960px;
 `;
 
 export const SignButton = styled.div`
   width: 30vw;
   height: 30vw;
-  max-width: 290px;
-  max-height: 290px;
+  max-width: 280px;
+  max-height: 280px;
   margin: 0px 30px 20px;
   cursor: pointer;
 `;
