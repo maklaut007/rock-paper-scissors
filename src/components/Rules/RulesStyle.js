@@ -35,6 +35,17 @@ export const RulesInfo = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media (min-width: 768px){
+    border-radius: 12px;
+    width: 580px;
+    height: 580px;
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 40px;
+  }
 `;
 export const RulesInfoTitle = styled.h2`
   text-transform: uppercase;
@@ -42,9 +53,20 @@ export const RulesInfoTitle = styled.h2`
 `;
 export const RulesInfoImage = styled.img`
   width: 90%;
+  order: 3;
+  @media (min-width: 768px){
+    width: 74%;
+    margin: 40px auto;
+  }
 `;
 export const CloseRules = styled.p`
   font-size: 2em;
   color: #bbb;
   cursor: pointer;
+  @media (min-width: 768px){
+    font-size: 1.2em;
+  }
+  &:hover{
+    color: #DD3A59;
+  }
 `;

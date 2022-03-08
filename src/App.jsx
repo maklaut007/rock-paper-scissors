@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     margin:0;
     padding:0;
+    
+    @media (min-width: 1000px){
+      overflow: hidden;
+  }
   }
   * {
     border: 0;

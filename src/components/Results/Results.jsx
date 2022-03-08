@@ -49,16 +49,16 @@ function Results() {
 
   return (
     <Styled.Results>
-      <Styled.Choice>
+      <Styled.Choice leftCircle>
         <Styled.SignButton resultsShown>
-          <Sign signType={gameStatus.chosenSign} />
+          <Sign signType={gameStatus.chosenSign} borderWidth="40px" />
           <Styled.PulsingCircle victory={victoryStatus === 'you win'} />
         </Styled.SignButton>
         <Styled.ChoiceText>YOU PICKED</Styled.ChoiceText>
       </Styled.Choice>
       <Styled.Choice>
         <Styled.SignButton resultsShown={resultsShown}>
-          <Sign signType={opponentSign} />
+          <Sign signType={opponentSign} borderWidth="40px" />
           <Styled.PulsingCircle victory={victoryStatus === 'you lose'} />
         </Styled.SignButton>
         <Styled.ChoiceText>THE HOUSE PICKED</Styled.ChoiceText>
