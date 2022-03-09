@@ -25,6 +25,7 @@ export const Rules = styled.div`
 `;
 export const RulesInfo = styled.div`
   display: ${(props) => (props.displayRules ? 'flex' : 'none')};
+  box-shadow: ${(props) => (props.displayRules ? '0 0 0 10000px rgba(0,0,0,.50);' : 'none')};
   height:100vh;
   width:100vw;
   position: absolute;

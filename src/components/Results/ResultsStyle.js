@@ -67,7 +67,7 @@ export const ChoiceText = styled.h2`
   font-weight: 500;
   letter-spacing: 0.09em;
 `;
-export const SignButton = styled.div`
+export const SignButtonWrap = styled.div`
   @media (min-width: 768px){
     order: 2;
   }
@@ -75,13 +75,17 @@ export const SignButton = styled.div`
   height: 32vw;
   max-width: 400px;
   max-height: 400px;
-  cursor: pointer;
-  background-color: #172240;
+  border-radius: 100%;
+  position: relative;
+  background-color: #182341;
+`;
+export const SignButton = styled.div`
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
   opacity: ${(props) => (props.resultsShown ? '100%' : '0')};
   transition: opacity 0.5s 1s ease-out;
   position: relative;
-  
 `;
 export const ResultText = styled.div`
   opacity: ${(props) => (props.resultsShown ? '100%' : '0')};

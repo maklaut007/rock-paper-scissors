@@ -50,17 +50,21 @@ function Results() {
   return (
     <Styled.Results>
       <Styled.Choice leftCircle>
-        <Styled.SignButton resultsShown>
-          <Sign signType={gameStatus.chosenSign} borderWidth="40px" />
-          <Styled.PulsingCircle victory={victoryStatus === 'you win'} />
-        </Styled.SignButton>
+        <Styled.SignButtonWrap>
+          <Styled.SignButton resultsShown>
+            <Sign signType={gameStatus.chosenSign} borderWidth="40px" />
+            <Styled.PulsingCircle victory={victoryStatus === 'you win'} />
+          </Styled.SignButton>
+        </Styled.SignButtonWrap>
         <Styled.ChoiceText>YOU PICKED</Styled.ChoiceText>
       </Styled.Choice>
       <Styled.Choice>
-        <Styled.SignButton resultsShown={resultsShown}>
-          <Sign signType={opponentSign} borderWidth="40px" />
-          <Styled.PulsingCircle victory={victoryStatus === 'you lose'} />
-        </Styled.SignButton>
+        <Styled.SignButtonWrap>
+          <Styled.SignButton resultsShown={resultsShown}>
+            <Sign signType={opponentSign} borderWidth="40px" />
+            <Styled.PulsingCircle victory={victoryStatus === 'you lose'} />
+          </Styled.SignButton>
+        </Styled.SignButtonWrap>
         <Styled.ChoiceText>THE HOUSE PICKED</Styled.ChoiceText>
       </Styled.Choice>
       <Styled.ResultText resultsShown={resultsShown}>
