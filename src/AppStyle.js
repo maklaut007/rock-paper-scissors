@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const App = styled.div`
-background-color: #192648;
+background: radial-gradient(at top,#1F3656,#161F40);
 width: 100%;
 min-height: 100%;
 display: flex;
