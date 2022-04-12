@@ -54,10 +54,11 @@ export const RulesInfoTitle = styled.h2`
 `;
 export const RulesInfoImage = styled.img`
   width: 90%;
-  order: 3;
+  
   @media (min-width: 768px){
     width: 74%;
     margin: 40px auto;
+    order: 3;
   }
 `;
 export const CloseRules = styled.p`
